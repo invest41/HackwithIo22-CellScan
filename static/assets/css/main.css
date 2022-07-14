@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		background: #d8ece8;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1968,7 +1968,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			box-shadow: none;
-			background-color: #4696e5;
+			background-color: #1aa0a0;
 			color: #ffffff !important;
 		}
 
@@ -3611,7 +3611,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		background-color: #4696e5;
+		background-color: #107e75;
 		color: #d1e5f9;
 		padding: 4.5em 0 2.5em 0 ;
 		-moz-align-items: center;
@@ -4075,7 +4075,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background-color: #f7f7f7;
+		background-color: #d8ece8;
 		color: #999999;
 		padding: 4.5em 0 2.5em 0 ;
 		color: #b0b0b0;
