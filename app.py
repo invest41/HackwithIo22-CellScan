@@ -101,6 +101,8 @@ def upload_file():
 
         # Make prediction
     pred, val = model_predict(uploaded_file, model)
+
+    if True: return str(val) #remember to remove
     
     threshold = 0.90
     str1 = 'Malaria Parasite Present'
