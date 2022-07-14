@@ -74,8 +74,10 @@ def model_predict(img_path, model):
 
    
     preds = model.predict(image)
-    pred = np.argmax(preds,axis = 1)
-    return pred
+    
+    pred = np.argmax(preds, axis = 1)[0]
+    val = preds[0][np.argmax(preds)]
+    return pred, val
 
 
 
@@ -98,13 +100,19 @@ def upload_file():
     
 
         # Make prediction
-    pred = model_predict(uploaded_file, model)
+    pred, val = model_predict(uploaded_file, model)
+    
+    threshold = 0.90
     str1 = 'Malaria Parasite Present'
     str2 = 'Normal'
-    if pred[0] == 0:
+    str3 = 'Low Confidence Prediction'
+    
+    if pred == 1 and val>threshold:
         return str1
-    else:
+    elif pred == 0 and val>threshold:
         return str2
+    else:
+        return str3
 
     
 
