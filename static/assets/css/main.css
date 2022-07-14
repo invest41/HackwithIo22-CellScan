@@ -1968,7 +1968,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			box-shadow: none;
-			background-color: #1aa0a0;
+			background-color: #808080;
 			color: #ffffff !important;
 		}
 
