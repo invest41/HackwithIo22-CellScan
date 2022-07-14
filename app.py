@@ -9,15 +9,14 @@ import re
 # Flask utils
 import flask
 from flask import Flask, redirect, url_for, request, render_template
-
+from flask_cors import CORS
 
 # Define a flask app
 app = Flask(__name__)
 
 
 
-
-
+CORS(app)
 
 
 

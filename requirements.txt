@@ -4,3 +4,4 @@ protobuf==3.20.*
 gunicorn
 gevent
 Werkzeug
+flask-cors
