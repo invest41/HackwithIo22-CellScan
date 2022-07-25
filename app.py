@@ -10,10 +10,9 @@ import io
 
 # Keras
 from tensorflow.keras.applications.imagenet_utils import preprocess_input, decode_predictions
-from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
-import tensorflow as tf
 from tensorflow.keras.preprocessing.image import img_to_array
+import tensorflow as tf
 
 
 
@@ -50,7 +49,7 @@ MODEL_PATH = 'models/Malaria_cell_classifation.h5'
 
 #Load your trained model
 model = tf.keras.models.load_model(MODEL_PATH)
-model._make_predict_function()      
+#model._make_predict_function()      
 print('Model loaded. Start serving...')
 
 def convertToBinaryData(filename):
