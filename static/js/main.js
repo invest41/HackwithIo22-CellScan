@@ -31,11 +31,7 @@ $(document).ready(function () {
     // Predict
     $('#btn-predict').click(function () {
         var form_data = new FormData();
-<<<<<<< HEAD
-        form_data.append("image", $('input[type=file]')[0].files[0]);
-=======
         form_data.append("file", $('input[type=file]')[0].files[0]);
->>>>>>> af79d27c9121ad2488f36b6f19867f07dd8a022c
 
         // Show loading animation
         $(this).hide();
@@ -44,11 +40,7 @@ $(document).ready(function () {
         // Make prediction by calling api /predict
         $.ajax({
             type: 'POST',
-<<<<<<< HEAD
-            url: 'http://35.239.79.117/predict',
-=======
             url: '/predict',
->>>>>>> af79d27c9121ad2488f36b6f19867f07dd8a022c
             data: form_data,
             contentType: false,
             cache: false,

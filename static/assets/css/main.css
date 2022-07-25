@@ -1968,11 +1968,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			box-shadow: none;
-<<<<<<< HEAD
-			background-color: #1aa0a0;
-=======
 			background-color: #808080;
->>>>>>> af79d27c9121ad2488f36b6f19867f07dd8a022c
 			color: #ffffff !important;
 		}
 
@@ -4150,8 +4146,4 @@ input, select, textarea {
 			padding: 3em 1.5em 1em 1.5em ;
 		}
 
-<<<<<<< HEAD
 	}
-=======
-	}
->>>>>>> af79d27c9121ad2488f36b6f19867f07dd8a022c

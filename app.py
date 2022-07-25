@@ -100,7 +100,7 @@ def upload_file():
         #return redirect(url_for('index'))
     
 
-        # Make prediction
+    # Make prediction
     pred, val = model_predict(uploaded_file, model)
 
     
