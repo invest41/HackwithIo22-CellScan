@@ -44,6 +44,24 @@
             <a class="navbar-brand" href="#">Malaria Detection Web App</a>
         </div>
     </nav-->
+
+    <div class="content" align='center'>
+        <table align='center'style="border:1px solid black;margin-left:auto;margin-right:auto;">
+                <th>Sample</th>
+                <th>Sample</th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="{{ url_for('static', filename='images/sample/C101P62ThinF_IMG_20150918_151507_cell_63.png') }}" alt="" height=100 />
+                </td>
+                <td>
+                    <img src="{{ url_for('static', filename='images/sample/C103P64ThinF_IMG_20150918_165016_cell_139.png') }}" alt="" height=100 />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
     <div class="container" align='center'>
         <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
     </div>
