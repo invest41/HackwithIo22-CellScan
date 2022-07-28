@@ -45,7 +45,7 @@ def prepare_image(image, target):
 	return image
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'models/Malaria_cell_classifation.h5'
+MODEL_PATH = 'models/Uniary_Malaria_cell_classifation.h5'
 
 #Load your trained model
 model = tf.keras.models.load_model(MODEL_PATH)
@@ -72,11 +72,10 @@ def model_predict(img_path, model):
     #img = np.expand_dims(img, axis=0)
 
    
-    preds = model.predict(image)
+    pred = model.predict(image)
     
-    pred = np.argmax(preds, axis = 1)[0]
-    val = preds[0][np.argmax(preds)]
-    return pred, val
+    
+    return pred[0][0]
 
 
 
@@ -100,19 +99,19 @@ def upload_file():
     
 
     # Make prediction
-    pred, val = model_predict(uploaded_file, model)
+    pred = model_predict(uploaded_file, model)
 
     
     
-    threshold = 0.90
+    threshold = 0.7
     str1 = 'Malaria Parasite Present'
     str2 = 'Normal'
     str3 = 'Low Confidence Prediction'
     
-    if pred == 1 and val>threshold:
+    if pred > threshold:
         return str1
-    elif pred == 0 and val>threshold:
-        return str2
+    elif 0.5 < pred < threshold:
+        return f"{str1} ({str2})"
     else:
         return str3
 
