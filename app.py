@@ -111,9 +111,11 @@ def upload_file():
     if pred > threshold:
         return str1
     elif 0.5 < pred < threshold:
-        return f"{str1} ({str2})"
+        return f"{str1} ({str3})"
+    elif 0.1 < pred < 0.5:
+        return f"{str2} ({str3})"
     else:
-        return str3
+        return str2
 
     
 
