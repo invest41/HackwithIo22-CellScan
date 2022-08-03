@@ -37,7 +37,7 @@ CORS(app)
 def prepare_image(image, target):
 	# resize the input image and preprocess it
 	image = image.resize(target)
-	image = img_to_array(image)
+	image = img_to_array(image)/255.0
 	image = np.expand_dims(image, axis=0)
 
 
@@ -122,7 +122,7 @@ def upload_file():
 
     #this section is used by gunicorn to serve the app on Heroku
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=os.environ['PORT'])
+  app.run()#host='0.0.0.0', port=os.environ['PORT'])
     #uncomment this section to serve the app locally with gevent at:  http://localhost:5000
     # Serve the app with gevent 
         #http_server = WSGIServer(('', 5000), app)
